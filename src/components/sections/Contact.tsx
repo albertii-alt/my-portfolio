@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import type { Transition } from 'framer-motion';
 import { Mail, GitFork, Link } from 'lucide-react';
 
 const fadeUp = {
@@ -7,7 +8,7 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
 };
 
-const transition = (delay = 0) => ({ duration: 0.4, ease: 'easeOut', delay });
+const transition = (delay = 0): Transition => ({ duration: 0.4, ease: 'easeOut', delay });
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import type { Transition } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const fadeUp = {
@@ -6,7 +7,7 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
 };
 
-const transition = (delay = 0) => ({
+const transition = (delay = 0): Transition => ({
   duration: 0.4,
   ease: 'easeOut',
   delay,

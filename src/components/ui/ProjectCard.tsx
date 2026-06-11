@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import { GitFork, ExternalLink } from 'lucide-react';
 import type { Project } from '../../data/projects';
 
 const statusLabel: Record<string, string> = {
@@ -64,7 +64,7 @@ export default function ProjectCard({ project, compact = false }: Props) {
           rel="noopener noreferrer"
           className="flex items-center gap-1.5 text-text-secondary hover:text-text-primary text-sm transition-colors"
         >
-          <Github size={14} /> GitHub
+          <GitFork size={14} /> GitHub
         </a>
         {project.live && (
           <a

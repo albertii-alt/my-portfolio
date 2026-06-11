@@ -61,7 +61,7 @@ export default function Projects() {
                 transition={{ duration: 0.3, ease: 'easeOut' }}
               >
                 {otherProjects.map(project => (
-                  <ProjectCard key={project.id} project={project} compact />
+                  <ProjectCard key={project.id} project={project} />
                 ))}
               </motion.div>
             )}

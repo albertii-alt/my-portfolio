@@ -15,7 +15,7 @@ const transition = (delay = 0) => ({
 export default function Hero() {
   return (
     <section
-      id="hero"
+      id="home"
       className="relative min-h-screen flex items-center"
       style={{
         backgroundImage: `radial-gradient(circle, var(--color-border-active) 1px, transparent 1px)`,

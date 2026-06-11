@@ -19,7 +19,7 @@ export default function Navbar() {
       entries => {
         entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
       },
-      { rootMargin: '-40% 0px -55% 0px' }
+      { rootMargin: '0px 0px -10% 0px' }
     );
     ids.forEach(id => {
       const el = document.getElementById(id);

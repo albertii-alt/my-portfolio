@@ -43,7 +43,7 @@ export default function AskJayar() {
           Ask Jay-ar
         </p>
         <p className="text-text-muted text-sm mb-8">
-          Powered by Claude · Knows my work, stack, and availability
+          Powered by Gemini · Knows my work, stack, and availability
         </p>
 
         {/* Chat history */}

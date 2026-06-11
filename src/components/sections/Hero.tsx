@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-bg-base/60 via-transparent to-bg-base pointer-events-none" />
 
       <div
-        className="relative z-10 w-full mx-auto px-6 py-32"
+        className="relative z-10 w-full mx-auto px-6 pt-32 pb-16"
         style={{ maxWidth: 'var(--content-max, 1100px)' }}
       >
         {/* Role label */}

@@ -37,7 +37,7 @@ export default function Projects() {
               transition={{ duration: 0.4, ease: 'easeOut' }}
               className="h-full"
             >
-              <ProjectCard project={project} />
+              <ProjectCard project={project} featured={true} image={project.image} />
             </motion.div>
           ))}
         </motion.div>
@@ -61,7 +61,7 @@ export default function Projects() {
                 transition={{ duration: 0.3, ease: 'easeOut' }}
               >
                 {otherProjects.map(project => (
-                  <ProjectCard key={project.id} project={project} />
+                  <ProjectCard key={project.id} project={project} featured={false} image={project.image} />
                 ))}
               </motion.div>
             )}

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { GitFork, ExternalLink } from 'lucide-react';
 import type { Project } from '../../data/projects';
@@ -17,15 +18,70 @@ const statusColor: Record<string, string> = {
 interface Props {
   project: Project;
   compact?: boolean;
+  featured?: boolean;
+  image?: string;
 }
 
-export default function ProjectCard({ project, compact = false }: Props) {
+function ImageFallback({ aspectClass }: { aspectClass: string }) {
+  return (
+    <div className={`${aspectClass} w-full bg-bg-base flex items-center justify-center`}>
+      <span className="font-display text-xs text-text-muted">[ screenshot coming soon ]</span>
+    </div>
+  );
+}
+
+function BrowserMockup({ image, title, projectId }: { image: string; title: string; projectId: string }) {
+  const [failed, setFailed] = useState(false);
+  return (
+    <div className="rounded-t-lg overflow-hidden border-b border-border">
+      <div className="bg-bg-elevated border-b border-border flex items-center gap-3 px-[14px] py-[10px]">
+        <div className="flex items-center gap-[6px]">
+          <span className="w-[10px] h-[10px] rounded-full bg-[#E2554F] block" />
+          <span className="w-[10px] h-[10px] rounded-full bg-[#E8B14B] block" />
+          <span className="w-[10px] h-[10px] rounded-full bg-accent block" />
+        </div>
+        <div className="flex-1 bg-bg-base border border-border rounded-md flex items-center justify-center py-0.5">
+          <span className="font-display text-xs text-text-muted">{projectId}.local</span>
+        </div>
+      </div>
+      {failed ? (
+        <ImageFallback aspectClass="aspect-[16/10]" />
+      ) : (
+        <img
+          src={image}
+          alt={title}
+          className="w-full aspect-[16/10] object-cover block"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </div>
+  );
+}
+
+function RegularImage({ image, title }: { image: string; title: string }) {
+  const [failed, setFailed] = useState(false);
+  return failed ? (
+    <ImageFallback aspectClass="aspect-video" />
+  ) : (
+    <img
+      src={image}
+      alt={title}
+      className="w-full aspect-video object-cover rounded-t-lg border-b border-border block"
+      onError={() => setFailed(true)}
+    />
+  );
+}
+
+export default function ProjectCard({ project, compact = false, featured = false, image }: Props) {
   return (
     <motion.div
-      className="bg-bg-surface border border-border rounded-lg p-6 flex flex-col gap-4 h-full"
+      className="bg-bg-surface border border-border rounded-lg flex flex-col gap-4 h-full overflow-hidden"
       whileHover={{ y: -2, borderColor: 'var(--color-accent-dim)' }}
       transition={{ duration: 0.2 }}
     >
+      {image && featured && <BrowserMockup image={image} title={project.title} projectId={project.id} />}
+      {image && !featured && <RegularImage image={image} title={project.title} />}
+      <div className="flex flex-col gap-4 p-6 pt-4 flex-1">
       {/* Header */}
       <div className="flex items-start justify-between gap-3">
         <h3 className="font-display text-text-primary text-base leading-snug">{project.title}</h3>
@@ -76,6 +132,7 @@ export default function ProjectCard({ project, compact = false }: Props) {
             <ExternalLink size={14} /> Live
           </a>
         )}
+      </div>
       </div>
     </motion.div>
   );

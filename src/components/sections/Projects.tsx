@@ -3,44 +3,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { featuredProjects, otherProjects } from '../../data/projects';
 import ProjectCard from '../ui/ProjectCard';
 
-const fadeUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-};
-
-const staggerContainer = {
-  animate: { transition: { staggerChildren: 0.08 } },
-};
-
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section id="projects" className="pt-10 pb-20 px-6">
+    <section id="projects" className="pt-10 pb-20 px-6 overflow-x-hidden">
       <div className="mx-auto" style={{ maxWidth: 'var(--content-max, 1100px)' }}>
         <p className="text-text-muted font-display text-sm uppercase tracking-widest mb-10">
           Projects
         </p>
 
-        {/* Featured grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          {featuredProjects.map(project => (
-            <motion.div
-              key={project.id}
-              variants={fadeUp}
-              transition={{ duration: 0.4, ease: 'easeOut' }}
-              className="h-full"
-            >
-              <ProjectCard project={project} featured={true} image={project.image} />
-            </motion.div>
+        {/* Featured stack */}
+        <div className="flex flex-col gap-6">
+          {featuredProjects.map((project, i) => (
+            <ProjectCard key={project.id} project={project} featured={true} image={project.image} index={i} />
           ))}
-        </motion.div>
+        </div>
 
         {/* See All toggle */}
         <div className="mt-10 flex flex-col items-center gap-6">

@@ -83,8 +83,8 @@ export default function ProjectCard({ project, compact = false, featured = false
     return (
       <motion.div
         className="bg-bg-surface border border-border rounded-lg overflow-hidden flex flex-col md:grid md:grid-cols-2"
-        initial={{ opacity: 0, x: isOdd ? 60 : -60 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: isOdd ? 60 : -60, y: 20 }}
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         whileHover={{ y: -2, borderColor: 'var(--color-accent-dim)' }}
         transition={{ duration: 0.6, ease: 'easeOut' as const }}

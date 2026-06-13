@@ -25,7 +25,7 @@ export const projects: Project[] = [
     status: 'active',
     featured: true,
     github: 'https://github.com/albertii-alt/pinili-cutlet-pos',
-    image: '/images/projects/PINILI CUTLET.png',
+    image: '/images/projects/PINILI CUTLET.webp',
   },
   {
     id: 'vantage-dental',
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     status: 'complete',
     featured: true,
     github: 'https://github.com/albertii-alt/dental-clinic-appointment-management-system',
-    image: '/images/projects/VANTAGE DENTAL CLINIC SYSTEM.png',
+    image: '/images/projects/VANTAGE DENTAL CLINIC SYSTEM.webp',
   },
   {
     id: 'flowday',
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     status: 'complete',
     featured: true,
     github: 'https://github.com/albertii-alt/flowday',
-    image: '/images/projects/FLOWDAY.png',
+    image: '/images/projects/FLOWDAY.webp',
   },
   {
     id: 'lumina-pos',
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     status: 'complete',
     featured: false,
     github: 'https://github.com/albertii-alt/hardware-pos',
-    image: '/images/projects/LUMINA POS.png',
+    image: '/images/projects/LUMINA POS.webp',
   },
   {
     id: 'homebase-finder',
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     featured: false,
     github: 'https://github.com/albertii-alt/homebase-finder',
     live: 'https://homebase-finder.vercel.app',
-    image: '/images/projects/HOMEBASE FINDER.png',
+    image: '/images/projects/HOMEBASE FINDER.webp',
   },
   {
     id: 'library-system',
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     featured: false,
     github: 'https://github.com/albertii-alt/library_system_management',
     live: 'https://library-system-management-demo.vercel.app',
-    image: '/images/projects/LIBRARY SYSTEM.png',
+    image: '/images/projects/LIBRARY SYSTEM.webp',
   },
   {
     id: 'bisayang-kusina',
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     status: 'complete',
     featured: false,
     github: 'https://github.com/albertii-alt/bisayang_kusina',
-    image: '/images/projects/BISAYANG KUSINA.png',
+    image: '/images/projects/BISAYANG KUSINA.webp',
   },
 ]
 

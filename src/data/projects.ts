@@ -37,7 +37,7 @@ export const projects: Project[] = [
     status: 'complete',
     featured: true,
     github: 'https://github.com/albertii-alt/dental-clinic-appointment-management-system',
-    image: '/images/projects/VANTAGE DENTAL CLINIC.webp',
+    image: '/images/projects/VANTAGE DENTAL CLINIC SYSTEM.webp',
   },
   {
     id: 'flowday',

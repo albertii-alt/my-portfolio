@@ -20,7 +20,6 @@ interface Props {
   compact?: boolean;
   featured?: boolean;
   image?: string;
-  index?: number;
   isLast?: boolean;
 }
 
@@ -66,7 +65,7 @@ function RegularImage({ image, title }: { image: string; title: string }) {
   );
 }
 
-export default function ProjectCard({ project, compact = false, featured = false, image, index = 0, isLast = false }: Props) {
+export default function ProjectCard({ project, compact = false, featured = false, image, isLast = false }: Props) {
   if (featured) {
     return (
       <motion.div

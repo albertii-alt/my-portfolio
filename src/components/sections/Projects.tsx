@@ -14,9 +14,9 @@ export default function Projects() {
         </p>
 
         {/* Featured stack */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-16">
           {featuredProjects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} featured={true} image={project.image} index={i} />
+            <ProjectCard key={project.id} project={project} featured={true} image={project.image} index={i} isLast={i === featuredProjects.length - 1} />
           ))}
         </div>
 

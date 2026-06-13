@@ -49,7 +49,7 @@ export const projects: Project[] = [
     status: 'complete',
     featured: true,
     github: 'https://github.com/albertii-alt/flowday',
-    image: '/images/projects/flowday.png',
+    image: '/images/projects/FLOWDAY.png',
   },
   {
     id: 'lumina-pos',
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     status: 'complete',
     featured: false,
     github: 'https://github.com/albertii-alt/hardware-pos',
-    image: '/images/projects/lumina-pos.png',
+    image: '/images/projects/LUMINA POS.png',
   },
   {
     id: 'homebase-finder',
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     featured: false,
     github: 'https://github.com/albertii-alt/homebase-finder',
     live: 'https://homebase-finder.vercel.app',
-    image: '/images/projects/homebase-finder.png',
+    image: '/images/projects/HOMEBASE FINDER.png',
   },
   {
     id: 'library-system',
@@ -86,7 +86,8 @@ export const projects: Project[] = [
     status: 'complete',
     featured: false,
     github: 'https://github.com/albertii-alt/library_system_management',
-    image: '/images/projects/library-system.png',
+    live: 'https://library-system-management-demo.vercel.app',
+    image: '/images/projects/LIBRARY SYSTEM.png',
   },
   {
     id: 'bisayang-kusina',
@@ -98,7 +99,7 @@ export const projects: Project[] = [
     status: 'complete',
     featured: false,
     github: 'https://github.com/albertii-alt/bisayang_kusina',
-    image: '/images/projects/bisayang-kusina.png',
+    image: '/images/projects/BISAYANG KUSINA.png',
   },
 ]
 
